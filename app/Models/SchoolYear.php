@@ -10,7 +10,7 @@ class SchoolYear extends Model
 {
     use HasFactory;
 
-    public function classroom(): HasMany
+    public function classrooms(): HasMany
     {
         return $this->hasMany(Classroom::class);
     }

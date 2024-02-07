@@ -20,9 +20,4 @@ class StudentClassroom extends Model
     {
         return $this->belongsTo(Classroom::class);
     }
-
-    public function schoolYears(): HasMany
-    {
-        return $this->hasMany(SchoolYear::class);
-    }
 }

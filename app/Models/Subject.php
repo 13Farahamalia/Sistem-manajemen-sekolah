@@ -10,4 +10,14 @@ class Subject extends Model
 {
     use HasFactory;
 
+    public function subjectTeachers(): HasMany
+    {
+        return $this->hasMany(SubjectTeacher::class);
+    }
+
+    public function subjectClassrooms(): HasMany
+    {
+        return $this->hasMany(SubjectClassroom::class);
+    }
+
 }

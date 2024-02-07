@@ -15,15 +15,20 @@ class Classroom extends Model
     {
         return $this->belongsTo(Teacher::class);
     }
-
+    
+    public function schoolYear(): BelongsTo
+    {
+        return $this->belongsTo(SchoolYear::class);
+    }
+    
     public function studentClassrooms(): HasMany
     {
         return $this->hasMany(StudentClassroom::class);
     }
 
-    public function schoolYear(): BelongsTo
+    public function subjectClassrooms(): HasMany
     {
-        return $this->belongsTo(SchoolYear::class);
+        return $this->hasMany(SubjectClassroom::class);
     }
-
+    
 }
